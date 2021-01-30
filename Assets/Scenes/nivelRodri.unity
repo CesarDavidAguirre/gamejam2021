@@ -369,6 +369,7 @@ GameObject:
   m_Component:
   - component: {fileID: 293826787}
   - component: {fileID: 293826786}
+  - component: {fileID: 293826788}
   m_Layer: 0
   m_Name: Mimocuerpo
   m_TagString: Untagged
@@ -440,6 +441,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &293826788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 293826785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a043ab4f6aac1c5528c701661d9171bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 293826786}
+  timeToChange: 0.1
 --- !u!1 &530183903
 GameObject:
   m_ObjectHideFlags: 0
@@ -507,6 +522,7 @@ GameObject:
   m_Component:
   - component: {fileID: 894438388}
   - component: {fileID: 894438387}
+  - component: {fileID: 894438389}
   m_Layer: 0
   m_Name: Mimomanoderecha
   m_TagString: Untagged
@@ -578,6 +594,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &894438389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 894438386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a043ab4f6aac1c5528c701661d9171bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 894438387}
+  timeToChange: 1
 --- !u!1 &1123770953
 GameObject:
   m_ObjectHideFlags: 0
@@ -588,6 +618,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1123770955}
   - component: {fileID: 1123770954}
+  - component: {fileID: 1123770956}
   m_Layer: 0
   m_Name: Mimomanoizq
   m_TagString: Untagged
@@ -659,6 +690,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1123770956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1123770953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a043ab4f6aac1c5528c701661d9171bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 1123770954}
+  timeToChange: 1
 --- !u!1 &1224002928
 GameObject:
   m_ObjectHideFlags: 0
