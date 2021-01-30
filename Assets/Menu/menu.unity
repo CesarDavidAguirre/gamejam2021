@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 7053446}
   - component: {fileID: 7053445}
   - component: {fileID: 7053444}
+  - component: {fileID: 7053448}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -220,6 +221,25 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!95 &7053448
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7053443}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 374af6491b4363d418242cdfc0064902, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8349285
 GameObject:
   m_ObjectHideFlags: 0
@@ -882,8 +902,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -60.4, y: -158}
-  m_SizeDelta: {x: 184.25452, y: 106.20436}
+  m_AnchoredPosition: {x: -60.4, y: -157.72}
+  m_SizeDelta: {x: 184.25452, y: 106.76738}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1888064271
 MonoBehaviour:
@@ -991,6 +1011,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1583857231}
     m_Modifications:
+    - target: {fileID: -5796175931675812638, guid: ea20c7d34d4eb0d4ea591d1bf4fd79b6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -3509540084141506891, guid: ea20c7d34d4eb0d4ea591d1bf4fd79b6,
         type: 3}
       propertyPath: m_RootOrder
@@ -1048,13 +1073,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -479115812277500586, guid: ea20c7d34d4eb0d4ea591d1bf4fd79b6,
         type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.204
+      propertyPath: m_LocalScale.x
+      value: 0.88943624
       objectReference: {fileID: 0}
     - target: {fileID: -479115812277500586, guid: ea20c7d34d4eb0d4ea591d1bf4fd79b6,
         type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 3.452
+      propertyPath: m_LocalPosition.x
+      value: -0.914
       objectReference: {fileID: 0}
     - target: {fileID: 3873760534185326268, guid: ea20c7d34d4eb0d4ea591d1bf4fd79b6,
         type: 3}
