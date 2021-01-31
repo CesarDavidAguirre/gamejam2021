@@ -4910,6 +4910,7 @@ GameObject:
   - component: {fileID: 1484089153665654916}
   - component: {fileID: 1484089153665654919}
   - component: {fileID: 1484089153665654914}
+  - component: {fileID: -2552196404092911514}
   m_Layer: 0
   m_Name: PJ
   m_TagString: Untagged
@@ -5003,6 +5004,7 @@ MonoBehaviour:
   PF_Proyectil: {fileID: 584683320870825318, guid: 2b2fb4e45d4e6f84f8608c5581d366c2,
     type: 3}
   Escudo: {fileID: 3393780668131881293, guid: fddb120a7e04c3a4d845c462c54f53a5, type: 3}
+  AdminVidas: {fileID: 0}
   anim: {fileID: 1484089153665654914}
 --- !u!95 &1484089153665654914
 Animator:
@@ -5023,6 +5025,27 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!50 &-2552196404092911514
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1484089153665654918}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &1484089153805219123
 GameObject:
   m_ObjectHideFlags: 0

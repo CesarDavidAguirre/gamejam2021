@@ -16,6 +16,7 @@ public class MovPersonaje_Nave : MonoBehaviour
     public GameObject PF_Proyectil;
     public GameObject Escudo;
     GameObject EscudoCreado;
+    public ControladorJuego AdminVidas;
 
 
     public Animator anim;
@@ -72,5 +73,18 @@ public class MovPersonaje_Nave : MonoBehaviour
         mov.x = horizontal * Time.deltaTime * VelocidadMov;
         mov.y = vertical * Time.deltaTime * VelocidadMov;
         this.transform.Translate(mov);
+    }
+
+   
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if ((collision.tag == "Enemigo") && !EstaEscudado)
+        {
+            EstaEscudado = false;            
+            AdminVidas.VidaPersonaje -= 1;
+            Destroy(collision.gameObject);            
+        }
+        
     }
 }
