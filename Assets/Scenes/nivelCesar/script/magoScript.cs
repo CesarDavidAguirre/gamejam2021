@@ -66,17 +66,14 @@ public class magoScript : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (other.gameObject.CompareTag("Finish"))
+        if (collision.gameObject.CompareTag("Finish"))
         {
             Debug.Log("entro al if");
             SceneManager.LoadScene("boss");
         }
-    }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.CompareTag("Enemy"))
+        if (collision.CompareTag("Enemy"))
         {
             vida = vida - 20;
             healdBar.fillAmount = vida / 100;
