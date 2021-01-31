@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class BalaIzquierda : MonoBehaviour
 {
-    public float Speed = 1;
+    public float Speed = 0.5f;
     
     void Start()
     {
-        Destroy(this.gameObject, 1.2f);
+        Destroy(this.gameObject, 0.3f);
     }
 
     // Update is called once per frame

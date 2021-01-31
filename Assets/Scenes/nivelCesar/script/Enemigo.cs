@@ -6,7 +6,7 @@ public class Enemigo : MonoBehaviour
 {
     public float RadioVision;
     public float velocidad;
-
+    public int CantidadDeHits;
     GameObject player;
 
     Vector2 initialPosition;
@@ -35,6 +35,23 @@ public class Enemigo : MonoBehaviour
         if (collision.gameObject.CompareTag("disparoPJ"))
         {
             Destroy(collision.gameObject);
+            if (CantidadDeHits == 0)
+            {
+                Destroy(this.gameObject);
+            }else
+            {
+                CantidadDeHits--;
+            }
         }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+
+        if (collision.gameObject.CompareTag("suelo"))
+        {
+            initialPosition = transform.position;
+        }
+
     }
 }
