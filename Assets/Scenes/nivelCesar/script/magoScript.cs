@@ -11,20 +11,35 @@ public class magoScript : MonoBehaviour
     public Animator animator;
     public float fuerzaSalto;
     private bool salto = false;
-
+    [Range(0.1f, 5)] public float CadenciaDisparoFija;
+    float CadenciaDisparoContador;
+    public GameObject PF_Proyectil;
+    public GameObject PF_ProyectilIzq;
+    public Transform PuntoDeDisparo;
+    public Transform PuntoDeDisparoIzq;
     float vida = 100;
     public Image healdBar;
+    
     // Start is called before the first frame update
     void Start()
     {
-        
+        CadenciaDisparoContador = CadenciaDisparoFija;
     }
 
     // Update is called once per frame
     void Update()
     {
         Mover();
-        if (Input.GetKeyDown(KeyCode.Space) && !salto)
+
+        if ((Input.GetKey(KeyCode.Space)))
+        {
+
+            animator.SetBool("Disparo", true);
+        } else animator.SetBool("Disparo", false);
+
+        if ((Input.GetKey(KeyCode.Space)) && (CadenciaDisparoContador <= 0)) DispararDerecha();
+
+        if (Input.GetKeyDown(KeyCode.UpArrow) && !salto)
         {
             animator.SetBool("saltar", true);
             salto = true;
@@ -43,6 +58,7 @@ public class magoScript : MonoBehaviour
         {
             animator.SetBool("correr", false);
         }
+        CadenciaDisparoContador -= Time.deltaTime;
     }
 
     void Mover()
@@ -66,11 +82,28 @@ public class magoScript : MonoBehaviour
         
     }
 
+    void DispararDerecha()
+    {
+        animator.Play("Atack");
+        if (this.GetComponent<SpriteRenderer>().flipX)
+        {
+            Instantiate(PF_ProyectilIzq, PuntoDeDisparoIzq.position, Quaternion.identity);
+        }
+        else
+        {
+            Instantiate(PF_Proyectil, PuntoDeDisparo.position, Quaternion.identity);
+        }
+        
+        
+
+        CadenciaDisparoContador = CadenciaDisparoFija;
+
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Finish"))
         {
-            Debug.Log("entro al if");
             SceneManager.LoadScene("boss");
         }
         if (collision.CompareTag("Enemy"))

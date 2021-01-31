@@ -4702,7 +4702,7 @@ ParticleSystemRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 584683319317068606}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -9666,10 +9666,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 584683320870825319}
-  - component: {fileID: 584683320870824600}
-  - component: {fileID: 4994155182539958479}
+  - component: {fileID: 1744393428496692092}
+  - component: {fileID: 3221558012896728058}
   m_Layer: 0
-  m_Name: Disparo
+  m_Name: DisparoIzquierda
   m_TagString: disparoPJ
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9694,21 +9694,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &584683320870824600
+--- !u!114 &1744393428496692092
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 2062073867673664945, guid: 7968cefe858ae6843a615987341f5c2d,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 584683320870825318}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89d94712e42cd204189f1e4a67caa92d, type: 3}
+  m_Script: {fileID: 11500000, guid: cb1274e61f7636947a5606819c2fa06b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 30
---- !u!58 &4994155182539958479
+--- !u!58 &3221558012896728058
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
