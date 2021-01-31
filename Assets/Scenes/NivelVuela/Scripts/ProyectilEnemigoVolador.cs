@@ -14,7 +14,9 @@ public class ProyectilEnemigoVolador : MonoBehaviour
         
     void Start()
     {
-        VidaDisparo = Random.Range(1,4);
+        VidaDisparo = Random.Range(1,5);
+        cantidadEsquirlas = Random.Range(6, 15);
+
         cantidadEsquirlasAngle = 360 / cantidadEsquirlas;
     }
 
@@ -32,6 +34,7 @@ public class ProyectilEnemigoVolador : MonoBehaviour
                 Instantiate(Esquirlas , this.transform.position , Quaternion.Euler(0,0,angulo));
                 angulo += cantidadEsquirlasAngle;
             }
+            
             Destroy(this.gameObject);
 
         }
