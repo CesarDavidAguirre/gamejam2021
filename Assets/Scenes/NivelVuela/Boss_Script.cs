@@ -29,7 +29,7 @@ public class Boss_Script : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "DisparoPJ")
+        if (collision.tag == "disparoPJ")
         {
             GC.VidaBoss -= 2;            
             SPR.color = ColorHit;
