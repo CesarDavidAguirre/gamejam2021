@@ -10,4 +10,10 @@ public class playScript : MonoBehaviour
     {
         SceneManager.LoadScene("nivelCesar");
     }
+
+    public void creditos()
+     {
+        SceneManager.LoadScene("Creditos");
+    }
+
 }

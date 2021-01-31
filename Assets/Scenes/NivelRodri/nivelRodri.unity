@@ -427,8 +427,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.40349, y: 1.2273504}
-  m_Size: {x: 4.830864, y: 8.171123}
+  m_Offset: {x: -0.40349, y: 2.818726}
+  m_Size: {x: 4.830864, y: 4.9883738}
   m_Direction: 0
 --- !u!114 &445785421 stripped
 MonoBehaviour:
@@ -514,7 +514,7 @@ GameObject:
   - component: {fileID: 894438390}
   m_Layer: 0
   m_Name: Mimomanoderecha
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
