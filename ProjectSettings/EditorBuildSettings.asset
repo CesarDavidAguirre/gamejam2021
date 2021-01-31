@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/boss.unity
     guid: 6e7c070131b35e641a3f78f045594dd1
+  - enabled: 1
+    path: Assets/Scenes/NivelVuela/Boss_Volador.unity
+    guid: bd7ff3387f14de345a9328a20529edc0
+  - enabled: 1
+    path: Assets/Scenes/gameOver.unity
+    guid: 549d3bc2743065244a77a9d3c4e10e08
   m_configObjects: {}

@@ -17,12 +17,14 @@ public class magoScript : MonoBehaviour
     public GameObject PF_ProyectilIzq;
     public Transform PuntoDeDisparo;
     public Transform PuntoDeDisparoIzq;
-    float vida = 100;
+    float vida = 150;
     public Image healdBar;
+    float vidaTotal;
     
     // Start is called before the first frame update
     void Start()
     {
+        vidaTotal = vida;
         CadenciaDisparoContador = CadenciaDisparoFija;
     }
 
@@ -79,7 +81,19 @@ public class magoScript : MonoBehaviour
         {
             salto = false;
         }
-        
+
+       
+
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            vida = vida - 20;
+            if (vida <= 0) SceneManager.LoadScene("gameOver");
+            healdBar.fillAmount = vida / vidaTotal;
+        }
     }
 
     void DispararDerecha()
@@ -109,8 +123,10 @@ public class magoScript : MonoBehaviour
         if (collision.CompareTag("Enemy"))
         {
             vida = vida - 20;
-            healdBar.fillAmount = vida / 100;
+            if (vida <= 0)SceneManager.LoadScene("gameOver");
+            healdBar.fillAmount = vida / vidaTotal;
         }
     }
+
 
 }

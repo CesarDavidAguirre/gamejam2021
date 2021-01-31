@@ -13,11 +13,13 @@ public class Payaso : MonoBehaviour
     public BoxCollider2D manoDerecha;
     public BoxCollider2D manoIzquierda;
     public Image barVidaPayaso;
-    float vida = 2000;
+    float vida = 1000;
+    float vidatotal;
     void Start()
     {
         animator = this.GetComponent<Animator>();
         Invoke("AnimacionesDeAtaque", 3f);
+        vidatotal = vida;
     }
 
     // Update is called once per frame
@@ -82,9 +84,9 @@ public class Payaso : MonoBehaviour
         if (collision.gameObject.CompareTag("disparoPJ"))
         {
             Destroy(collision.gameObject);
-            vida = vida - 20;
-            if (vida == 0) SceneManager.LoadScene("menu");
-            barVidaPayaso.fillAmount = vida / 2000;
+            vida = vida - 25;
+            if (vida <= 0) SceneManager.LoadScene("Boss_Volador");
+            barVidaPayaso.fillAmount = vida / vidatotal;
         }
     }
 
