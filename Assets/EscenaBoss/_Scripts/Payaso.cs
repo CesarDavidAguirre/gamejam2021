@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Payaso : MonoBehaviour
 {
@@ -12,7 +13,7 @@ public class Payaso : MonoBehaviour
     public BoxCollider2D manoDerecha;
     public BoxCollider2D manoIzquierda;
     public Image barVidaPayaso;
-    float vida = 100;
+    float vida = 2000;
     void Start()
     {
         animator = this.GetComponent<Animator>();
@@ -80,8 +81,10 @@ public class Payaso : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("disparoPJ"))
         {
+            Destroy(collision.gameObject);
             vida = vida - 20;
-            barVidaPayaso.fillAmount = vida / 100;
+            if (vida == 0) SceneManager.LoadScene("menu");
+            barVidaPayaso.fillAmount = vida / 2000;
         }
     }
 
