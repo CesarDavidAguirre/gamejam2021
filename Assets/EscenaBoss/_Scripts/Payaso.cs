@@ -23,7 +23,7 @@ public class Payaso : MonoBehaviour
     {
         
         randomNumero = Random.Range(0, 3);
-        Debug.Log(randomNumero);
+        
         if(randomNumero == 0)
         {
             animator.SetBool("Ataque1", true);
