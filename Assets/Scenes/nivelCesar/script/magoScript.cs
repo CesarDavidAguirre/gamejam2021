@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class magoScript : MonoBehaviour
 {
@@ -8,6 +9,9 @@ public class magoScript : MonoBehaviour
     public Animator animator;
     public float fuerzaSalto;
     private bool salto = false;
+
+    float vida = 100;
+    public Image healdBar;
     // Start is called before the first frame update
     void Start()
     {
@@ -56,6 +60,14 @@ public class magoScript : MonoBehaviour
         if (collision.gameObject.CompareTag("suelo"))
         {
             salto = false;
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.CompareTag("Enemy"))
+        {
+            vida = vida - 20;
+            healdBar.fillAmount = vida / 100;
         }
     }
 
