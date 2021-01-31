@@ -7,7 +7,7 @@ TagManager:
   - suelo
   - Enemy
   - EnemyHead
-  - Bala
+  - disparoPJ
   layers:
   - Default
   - TransparentFX
