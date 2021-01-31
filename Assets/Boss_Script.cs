@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Boss_Script : MonoBehaviour
 {
@@ -31,7 +32,8 @@ public class Boss_Script : MonoBehaviour
     {
         if (collision.tag == "disparoPJ")
         {
-            GC.VidaBoss -= 2;            
+            GC.VidaBoss -= 2;
+            if (GC.VidaBoss <= 0) SceneManager.LoadScene("Menu");
             SPR.color = ColorHit;
             TiempoFade = 0.2f;
         }

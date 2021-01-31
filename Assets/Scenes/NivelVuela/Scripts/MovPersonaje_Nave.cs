@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MovPersonaje_Nave : MonoBehaviour
 {
@@ -17,6 +19,8 @@ public class MovPersonaje_Nave : MonoBehaviour
     public GameObject Escudo;
     GameObject EscudoCreado;
     public ControladorJuego AdminVidas;
+    public Image healdBar;
+    float vidaTotal;
 
 
     public Animator anim;
@@ -24,7 +28,9 @@ public class MovPersonaje_Nave : MonoBehaviour
     void Start()
     {
         CadenciaDisparoContador = CadenciaDisparoFija;
-        
+        vidaTotal = AdminVidas.VidaPersonaje;
+
+
     }
 
     
@@ -83,6 +89,8 @@ public class MovPersonaje_Nave : MonoBehaviour
         {
             EstaEscudado = false;            
             AdminVidas.VidaPersonaje -= 1;
+            if (AdminVidas.VidaPersonaje <= 0) SceneManager.LoadScene("gameOver");
+            healdBar.fillAmount = AdminVidas.VidaPersonaje / vidaTotal;
             Destroy(collision.gameObject);            
         }
         

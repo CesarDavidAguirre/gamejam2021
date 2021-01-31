@@ -10,4 +10,9 @@ public class playScript : MonoBehaviour
     {
         SceneManager.LoadScene("nivelCesar");
     }
+
+    public void menuPrincipal()
+    {
+        SceneManager.LoadScene("menu");
+    }
 }
