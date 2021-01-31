@@ -1,5 +1,65 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &303257292
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 303257293}
+  m_Layer: 0
+  m_Name: PosManoDerecha
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &303257293
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 303257292}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.02, y: 2.67, z: 0}
+  m_LocalScale: {x: 0.8915237, y: 1.0293225, z: 0.249}
+  m_Children: []
+  m_Father: {fileID: 7188759749891628794}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &913445480
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 913445481}
+  m_Layer: 0
+  m_Name: PosManoIzquierda
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &913445481
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 913445480}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.38, y: 1.91, z: 0}
+  m_LocalScale: {x: 0.8915237, y: 1.0293225, z: 0.249}
+  m_Children: []
+  m_Father: {fileID: 7188759749891628794}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7188759749891628799
 GameObject:
   m_ObjectHideFlags: 0
@@ -30,8 +90,10 @@ Transform:
   m_GameObject: {fileID: 7188759749891628799}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6.98, y: -2.57, z: 0}
-  m_LocalScale: {x: 0.30624107, y: 0.2690339, z: 1}
-  m_Children: []
+  m_LocalScale: {x: 0.2792971, y: 0.24190669, z: 1}
+  m_Children:
+  - {fileID: 303257293}
+  - {fileID: 913445481}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -73,7 +135,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 2be3529cdfb51bc4ea471c84ae07876d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -135,7 +197,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 2
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -156,3 +218,11 @@ MonoBehaviour:
   velocidad: 5
   animator: {fileID: 7188759749891628796}
   fuerzaSalto: 10
+  CadenciaDisparoFija: 0.25
+  PF_Proyectil: {fileID: 584683320870825318, guid: 2b2fb4e45d4e6f84f8608c5581d366c2,
+    type: 3}
+  PF_ProyectilIzq: {fileID: 584683320870825318, guid: 29f5967477ace3f47831b9da7aae6a02,
+    type: 3}
+  PuntoDeDisparo: {fileID: 303257293}
+  PuntoDeDisparoIzq: {fileID: 913445481}
+  healdBar: {fileID: 0}

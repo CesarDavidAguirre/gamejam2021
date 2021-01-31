@@ -1,13 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Payaso : MonoBehaviour
 {
     public Animator animator;
+    public GameObject manoDerechaObj;
+    public GameObject manoIzquierdaObj;
     int randomNumero;
     public BoxCollider2D manoDerecha;
     public BoxCollider2D manoIzquierda;
+    public Image barVidaPayaso;
+    float vida = 2000;
     void Start()
     {
         animator = this.GetComponent<Animator>();
@@ -23,7 +29,7 @@ public class Payaso : MonoBehaviour
     {
         
         randomNumero = Random.Range(0, 3);
-        Debug.Log(randomNumero);
+        
         if(randomNumero == 0)
         {
             animator.SetBool("Ataque1", true);
@@ -37,6 +43,7 @@ public class Payaso : MonoBehaviour
             animator.SetBool("Ataque3", true);
             manoDerecha.enabled = true;
             manoIzquierda.enabled = true;
+            
 
         }
         Invoke("AnimacionesDeAtaque", 5f);
@@ -60,5 +67,25 @@ public class Payaso : MonoBehaviour
     {
         manoDerecha.enabled = false;
         manoIzquierda.enabled = false;
+        manoDerechaObj.SetActive(false);
+        manoIzquierdaObj.SetActive(false);
+        manoDerechaObj.transform.localScale = new Vector3(0, manoDerechaObj.transform.localScale.y, 0);
+        manoIzquierdaObj.transform.localScale = new Vector3(0, manoIzquierdaObj.transform.localScale.y, 0);
     }
+    void AnimacionArcoiris ()
+    {
+        manoDerechaObj.SetActive(true);
+        manoIzquierdaObj.SetActive(true);
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("disparoPJ"))
+        {
+            Destroy(collision.gameObject);
+            vida = vida - 20;
+            if (vida == 0) SceneManager.LoadScene("menu");
+            barVidaPayaso.fillAmount = vida / 2000;
+        }
+    }
+
 }
