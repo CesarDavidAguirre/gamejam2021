@@ -5,8 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - suelo
-  - Enemigo
-  - DisparoPJ
+  - Enemy
+  - EnemyHead
+  - disparoPJ
   layers:
   - Default
   - TransparentFX

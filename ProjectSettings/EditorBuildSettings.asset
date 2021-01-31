@@ -4,5 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/menu.unity
+    guid: 8743609a97a01ce469ff7458f7146498
+  - enabled: 1
+    path: Assets/Scenes/nivelCesar/nivelCesar.unity
+    guid: 550fe57a7c35d224981b5f9b21774e51
+  - enabled: 1
+    path: Assets/Scenes/boss.unity
+    guid: 6e7c070131b35e641a3f78f045594dd1
   m_configObjects: {}
