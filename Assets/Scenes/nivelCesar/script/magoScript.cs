@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class magoScript : MonoBehaviour
 {
@@ -56,6 +57,16 @@ public class magoScript : MonoBehaviour
         if (collision.gameObject.CompareTag("suelo"))
         {
             salto = false;
+        }
+        
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Finish"))
+        {
+            Debug.Log("entro al if");
+            SceneManager.LoadScene("boss");
         }
     }
 
