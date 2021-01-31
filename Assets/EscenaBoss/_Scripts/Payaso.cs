@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Payaso : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class Payaso : MonoBehaviour
     int randomNumero;
     public BoxCollider2D manoDerecha;
     public BoxCollider2D manoIzquierda;
+    public Image barVidaPayaso;
+    float vida = 100;
     void Start()
     {
         animator = this.GetComponent<Animator>();
@@ -73,4 +76,13 @@ public class Payaso : MonoBehaviour
         manoDerechaObj.SetActive(true);
         manoIzquierdaObj.SetActive(true);
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("disparoPJ"))
+        {
+            vida = vida - 20;
+            barVidaPayaso.fillAmount = vida / 100;
+        }
+    }
+
 }
