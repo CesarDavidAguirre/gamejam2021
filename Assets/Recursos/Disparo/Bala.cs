@@ -13,6 +13,11 @@ public class Bala : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        VidaUtil -= Time.deltaTime;
+        if (VidaUtil <= 0)
+        {
+            Destroy(this.gameObject);
+        }
         transform.Translate(1 * Time.deltaTime * Speed, 0, 0);
     }
 

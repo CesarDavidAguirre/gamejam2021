@@ -5,6 +5,8 @@ using UnityEngine;
 public class Proyectil_Nave : MonoBehaviour
 {
     public float Velocidad;
+
+    float VidaUtil = 10;
     void Start()
     {
         
@@ -18,6 +20,11 @@ public class Proyectil_Nave : MonoBehaviour
 
     private void FixedUpdate()
     {
+        VidaUtil -= Time.deltaTime;
+        if (VidaUtil<=0)
+        {
+            Destroy(this.gameObject);
+        }
         transform.Translate(Time.deltaTime * Velocidad , 0 , 0);
     }
 }
