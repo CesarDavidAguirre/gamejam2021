@@ -217,7 +217,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.8472054, y: 7.178854}
+  m_Size: {x: 2.3090472, y: 5.569747}
   m_EdgeRadius: 0
 --- !u!1 &320981396
 GameObject:
@@ -251,7 +251,7 @@ MonoBehaviour:
   EnemigosASpawnear: {fileID: 2181766026759769184, guid: c8ac66e04dfb4da4096154f65904a251,
     type: 3}
   Temporizador: 1
-  Velocidad: 8
+  Velocidad: 2
   Desfase: 0
   Nodo1: {fileID: 881959126}
   Nodo2: {fileID: 32101363}
@@ -365,6 +365,7 @@ GameObject:
   - component: {fileID: 459176758}
   - component: {fileID: 459176761}
   - component: {fileID: 459176762}
+  - component: {fileID: 459176763}
   m_Layer: 0
   m_Name: Gigante
   m_TagString: Untagged
@@ -490,6 +491,102 @@ MonoBehaviour:
   SPR: {fileID: 459176759}
   colorInicial: {r: 1, g: 1, b: 1, a: 1}
   ColorHit: {r: 1, g: 0, b: 0, a: 1}
+--- !u!82 &459176763
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 459176757}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: d1e90be5ac9210746ab8b9fe67377756, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &532368110
 GameObject:
   m_ObjectHideFlags: 0
@@ -870,7 +967,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemigosASpawnear: {fileID: 8065648074136601203, guid: b3fe2aae17907c54999c41b371e9092e,
     type: 3}
-  Temporizador: 5
+  Temporizador: 3
   Cadencia: 3
   CantidadACrear: 3
   Velocidad: 10
@@ -954,7 +1051,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 0.656
+  m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
